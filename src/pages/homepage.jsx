@@ -2,28 +2,22 @@
 
 import Flip from "../components/Flip";
 import inkspire from "../img/logoss.png";
-
+import HorizontalScroll from "../components/HorizontalScroll";
+import { Hero } from "../components/div";
+import Marquee from "../components/Marquee";
 export const HomePage = () => {
   return (
     <>
-      <div className="mt-16 max-w-[105rem] mx-auto">
-        <div className="flex justify-between ">
-          <div className="">
-            <h1 className="text-xl font-nunito font-bold">I am Royan</h1>
-            <div className="cursor-pointer tracking-[0.5rem]">
-              {["web", "developer"].map((item) => (
-                <Flip key={item}>{item}</Flip>
-              ))}
-            </div>
-            <div className="w-[40rem] mt-5">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                temporibus laboriosam enim, quis eaque animi aliquam laudantium
-                cupiditate laborum dolores!
-              </p>
-            </div>
-          </div>
-          <div className="bg-black h-80 w-72">logos</div>
+      <div className=" max-w-[105rem] mx-auto">
+        {/* hero section */}
+        <Hero />
+        <div class="absolute -top-36 w-80 left-1/3 h-80 bg-purple-800 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute -top-36 z-10 left-[58rem] w-80 h-80 bg-purple-600 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute -top-36 z-10 left-[47rem] w-80 h-80 bg-sky-600 rounded-full blur-3xl opacity-50"></div>
+        {/* halaman horizontal scroll */}
+        <div className="mt-0">
+          <h1>My Project</h1>
+          <Marquee />
         </div>
       </div>
     </>

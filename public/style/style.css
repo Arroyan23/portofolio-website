@@ -1,0 +1,8 @@
+/* CSS tambahan untuk navbar */
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

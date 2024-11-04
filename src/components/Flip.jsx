@@ -8,7 +8,7 @@ const Flip = ({ children }) => {
     <motion.div
       initial="initial"
       whileHover="hovered"
-      className="relative block overflow-hidden whitespace-nowrap text-4xl font-black uppercase tracking-tighter sm:text-7xl md:text-8xl lg:text-9xl"
+      className="relative block overflow-hidden whitespace-nowrap text-4xl font-black uppercase tracking-tighter sm:text-7xl md:text-8xl lg:text-9xl "
       style={{ lineHeight: 0.85 }}
     >
       <div>
