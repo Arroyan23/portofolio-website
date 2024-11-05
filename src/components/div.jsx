@@ -24,7 +24,7 @@ export const Hero = () => {
         exit="out"
         variants={heroVariants}
         transition={transition}
-        className="min-h-[80vh] mt-72"
+        className=""
       >
         <div className="flex justify-center">
           <div>
