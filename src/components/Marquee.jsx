@@ -7,7 +7,7 @@ const Marquee = () => {
   const oneHalfLength = Math.ceil(skills.length / 2);
 
   return (
-    <div className="mx-auto space-y-6">
+    <div className="mx-auto space-y-6 min-h-72">
       <div className="flex overflow-hidden x-gradient">
         <motion.div
           initial={{ x: 0 }}

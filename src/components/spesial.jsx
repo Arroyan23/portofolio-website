@@ -8,7 +8,7 @@ export const Special = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-br from-purpleLight to-white/30 flex-1 py-3 px-4 rounded-xl hover:outline my-3 cursor-pointer">
+      <div className="bg-gradient-to-br from-purpleLight to-white/30 flex-1 py-3 px-4 rounded-xl max-w-xl hover:outline my-3 cursor-pointer">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <FontAwesomeIcon

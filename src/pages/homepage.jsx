@@ -6,6 +6,11 @@ import { Hero } from "../components/div";
 import Marquee from "../components/Marquee";
 import PageScroll from "../components/PageScroll";
 import { Special } from "../components/spesial";
+import image from "../img/971.jpg";
+import { ImageCard } from "../components/image";
+import cooperativeImg from "../img/selasaremove.png";
+import mahoniImage from "../img/mahoni.png";
+import { ProjectView } from "../components/project";
 
 export const HomePage = () => {
   const [detail, setDetail] = useState("mongodb");
@@ -24,9 +29,28 @@ export const HomePage = () => {
   };
   return (
     <>
-      <div className="max-w-[105rem] mx-auto">
+      <div className="">
         {/* Hero Section */}
-        <div className="flex min-h-screen justify-center max-w-7xl mx-auto pt-20 pb-8">
+        <div
+          className="flex min-h-screen justify-center max-w-full mx-auto pt-20 pb-8 relative"
+          style={{
+            opacity: 1,
+            backgroundImage: `url(${image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <svg
+            className="absolute bottom-0 w-full"
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="#020617"
+              d="M0,320L48,290C96,260,192,230,288,210C384,190,480,180,576,180C672,180,768,190,864,210C960,230,1056,260,1152,250C1248,240,1344,200,1392,160L1440,120L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            />
+          </svg>
           <div className="grid place-items-center w-full rounded-2xl max-h-xl">
             <Hero />
           </div>
@@ -37,22 +61,34 @@ export const HomePage = () => {
         <div className="absolute -top-36 z-10 left-[58rem] w-80 h-80 bg-purple-600 rounded-full blur-3xl opacity-50"></div>
         <div className="absolute -top-36 z-10 left-[47rem] w-80 h-80 bg-sky-600 rounded-full blur-3xl opacity-50"></div>
 
-        {/* Halaman Scroll */}
         <div className="mt-10 max-w-5xl mx-auto mb-72">
           <PageScroll />
         </div>
-
-        <div className="relative mt-0 max-w-4xl mx-auto p-10 bg-purpleCustom/50 backdrop-blur-xl rounded-lg border border-white/20 shadow-lg shadow-slate-900">
-          <div className="absolute inset-0 bg-gradient-to-t from-purple-700 via-white/20 to-transparent rounded-lg"></div>
-
-          <div className="relative z-10 text-center text-white">
-            <h1 className="text-2xl font-bold mb-5">Our Abilities</h1>
-            <Marquee />
+        {/* halaman untuk kedua element berantem */}
+        <div className="flex justify-between">
+          <div className="flex-1 -mt-32 -mr-24 z-20">
+            <ImageCard />
+          </div>
+          <div className="relative max-w-5xl mt-0 p-10 bg-purple-800 backdrop-blur-xl shadow-lg shadow-slate-900 rounded-bl-xl">
+            <div className="relative z-10 text-center text-white pt-14">
+              <h1 className="text-2xl font-bold mb-5">Our Abilities</h1>
+              <Marquee />
+            </div>
+            <img
+              src={cooperativeImg}
+              alt=""
+              className="absolute bottom-0 right-0 h-72 w-72 opacity-70"
+            />
+            <img
+              src={mahoniImage}
+              alt=""
+              className="absolute -top-5 h-72 w-72 left-14 opacity-70"
+            />
           </div>
         </div>
 
         {/* Halaman Layanan */}
-        <div className="max-w-5xl mx-auto mt-20">
+        <div className="max-w-5xl mx-auto mt-72">
           <h1 className="text-3xl font-bold mb-8 text-center text-purple-500">
             Our Services
           </h1>
@@ -65,40 +101,12 @@ export const HomePage = () => {
         </div>
 
         {/* halaman spesialisasi */}
-        <div className="max-w-7xl mx-auto mt-72">
+        <div className=" mt-60 ">
           <h1 className="text-3xl font-bold mb-8 text-center text-purple-500">
-            Our Core Competencies
+            Our Project
           </h1>
-          <div className="mt-8 flex justify-between space-x-28">
-            <div className="bg-purple-600 flex-1 py-3 px-7 rounded-xl">
-              <div className="flex-1">
-                <div onClick={click1}>
-                  <Special />
-                </div>
-                <div onClick={click2}>
-                  <Special />
-                </div>
-                <div onClick={click3}>
-                  <Special />
-                </div>
-                <div onClick={click4}>
-                  <Special />
-                </div>
-              </div>
-            </div>
-            <div className="bg-purpleCustom max-w-sm flex items-center px-5 rounded-xl shadow-2xl shadow-slate-900">
-              {detail === "mongodb" ? (
-                <DetailExp heading="mongodb" />
-              ) : detail === "express" ? (
-                <DetailExp heading="express" />
-              ) : detail === "reactjs" ? (
-                <DetailExp heading="reactjs" />
-              ) : detail === "nodejs" ? (
-                <DetailExp heading="Node JS" />
-              ) : (
-                "hi"
-              )}
-            </div>
+          <div className="">
+            <ProjectView />
           </div>
         </div>
       </div>

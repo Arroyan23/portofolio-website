@@ -5,7 +5,7 @@ const STAGGER = 0.025;
 
 const FlipDiv = ({ text, under }) => {
   return (
-    <div className="w-fit min-w-16 rounded-lg border border-primary-500 bg-primary-500/5 text-sm text-primary-500 hover:bg-primary-500 hover:text-white">
+    <div className="w-fit min-w-16 rounded-lg border-2 mb-5 bg-primary-500/5 text-sm text-primary-500 hover:bg-primary-500 hover:text-white">
       <motion.div
         initial="initial"
         whileHover="hovered"
@@ -43,7 +43,7 @@ const FlipDiv = ({ text, under }) => {
               delay: STAGGER,
             }}
           >
-            {under? under: <span className="text-base pt-1">{text}</span>}
+            {under ? under : <span className="text-base pt-1">{text}</span>}
 
             {/* {under} */}
           </motion.span>
