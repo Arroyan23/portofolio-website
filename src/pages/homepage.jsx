@@ -109,6 +109,18 @@ export const HomePage = () => {
             <ProjectView />
           </div>
         </div>
+
+        {/* halaman team dan kemampuannya */}
+        <div className="max-w-5xl mx-auto mt-40">
+          <h1 className="text-center text-3xl font-bold text-purple-500">
+            Meet Our Team
+          </h1>
+          <div className="">
+            {/* component our team */}
+
+            {/* component tulisannya */}
+          </div>
+        </div>
       </div>
     </>
   );
